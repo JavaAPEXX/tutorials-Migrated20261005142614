@@ -1,0 +1,38 @@
+<configuration>
+
+    <!-- Use a JUnit-provided temp dir (set from the test) -->
+    <property name="outputDir" value="${outputDir:-.}"/>
+
+    <!-- IF ENVIRONMENT contains PROD -> file logger, ELSE -> console logger -->
+    <condition class="ch.qos.logback.core.boolex.ExpressionPropertyCondition">
+        <expression>propertyContains("ENVIRONMENT", "PROD")</expression>
+    </condition>
+
+    <if>
+        <then>
+            <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+                <file>${outputDir}/conditional.log</file>
+                <encoder>
+                    <pattern>%d %-5level %logger{35} - %msg%n</pattern>
+                </encoder>
+            </appender>
+
+            <root level="DEBUG">
+                <appender-ref ref="FILE"/>
+            </root>
+        </then>
+
+        <else>
+            <appender name="CON" class="ch.qos.logback.core.ConsoleAppender">
+                <encoder>
+                    <pattern>%d %-5level %logger{35} - %msg%n</pattern>
+                </encoder>
+            </appender>
+
+            <root level="DEBUG">
+                <appender-ref ref="CON"/>
+            </root>
+        </else>
+    </if>
+
+</configuration>

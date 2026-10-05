@@ -1,0 +1,26 @@
+import React from 'react';
+import './ImageDownload.css';
+
+const ImageDownload: React.FC = () => {
+  return (
+    <div className="modern-container">
+      <div className="modern-card">
+        <h1 className="modern-title">Download Images</h1>
+
+        {/* Example list – replace with real data as needed */}
+        <ul className="modern-list">
+          <li className="modern-list-item">Image 1</li>
+          <li className="modern-list-item">Image 2</li>
+          <li className="modern-list-item">Image 3</li>
+        </ul>
+
+        {/* Primary action button */}
+        <a href="#" className="btn btn-primary">
+          Download All
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default ImageDownload;

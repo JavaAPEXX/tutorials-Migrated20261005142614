@@ -1,0 +1,100 @@
+import React from 'react';
+
+const styles = `
+.modern-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.modern-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.modern-card h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #1a202c;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.example-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.example-item p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3182ce;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+`;
+
+const Index: React.FC = () => {
+  return (
+    <div className="modern-container">
+      <style>{styles}</style>
+      <div className="modern-card">
+        <h1>Welcome</h1>
+        <div className="example-list">
+          <div className="example-item">
+            <p>Example Item 1</p>
+            <button className="btn btn-primary">Action</button>
+          </div>
+          <div className="example-item">
+            <p>Example Item 2</p>
+            <button className="btn btn-primary">Action</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Index;

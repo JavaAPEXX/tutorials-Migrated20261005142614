@@ -1,0 +1,54 @@
+/* Modern responsive container */
+.modern-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Card styling */
+.modern-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+/* Title */
+.card-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Table wrapper for responsive overflow */
+.modern-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Detail table styling */
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detail-table td {
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+/* Labels (first column) */
+.detail-label {
+  font-weight: 600;
+  width: 40%;
+}
+
+/* Values (second column) */
+.detail-value {
+  width: 60%;
+}
+
+/* Export the component (assumes it is defined elsewhere in this file) */
+export default EmployeeView;
